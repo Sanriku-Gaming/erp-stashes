@@ -101,7 +101,7 @@ CreateThread(function()
             elseif type(v.job) == 'table' then
               for job, requiredGrade in pairs(v.job) do
                 if type(job) == 'number' then
-                  if PlayerJob.name == job and PlayerJob.grade >= requiredGrade then
+                  if PlayerJob.name == job and PlayerJob.grade.level >= requiredGrade then
                     return true
                   end
                 elseif type(job) == 'string' then
